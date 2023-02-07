@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
+
         task1();
         task2();
+        task3();
     }
 
     public static void checkLeapYear(int year) {
@@ -36,5 +38,26 @@ public class Main {
         byte clientOS = 1;
         int clientDeviceYear = 2021;
         checkOSAndYear(clientOS, clientDeviceYear);
+    }
+
+    public static int checkDeliveryDays(int distance) {
+        int deliveryDays = 1;
+        if (distance > 20 && distance <= 60) {
+            deliveryDays++;
+        } else if (distance > 60 && distance <= 100) {
+            deliveryDays += 2;
+        } else if (distance > 100) {
+            return 0;
+        }
+        return deliveryDays;
+    }
+
+    public static void task3() {
+        System.out.println("Задача 3");
+        int deliveryDistance = 21;
+        int deliveryDays = checkDeliveryDays(deliveryDistance);
+        if (deliveryDays > 0) {
+            System.out.println("На доставку потребуется " + deliveryDays + " дня");
+        }
     }
 }
