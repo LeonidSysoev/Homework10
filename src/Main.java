@@ -1,9 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        task1();
-        task2();
-        task3();
+        System.out.println("Задача 1");
+        int year = 2023;
+        checkLeapYear(year);
+        System.out.println("Задача 2");
+        byte clientOS = 1;
+        int clientDeviceYear = 2021;
+        checkOSAndYear(clientOS, clientDeviceYear);
+        System.out.println("Задача 3");
+        int deliveryDistance = 21;
+        int deliveryDays = checkDeliveryDays(deliveryDistance);
+        if (deliveryDays > 0) {
+            System.out.println("На доставку потребуется " + deliveryDays + " дня");
+        }
     }
 
     public static void checkLeapYear(int year) {
@@ -12,12 +22,6 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным");
         }
-    }
-
-    public static void task1() {
-        System.out.println("Задача 1");
-        int year = 2023;
-        checkLeapYear(year);
     }
 
     public static void checkOSAndYear(byte clientOS, int clientDeviceYear) {
@@ -33,13 +37,6 @@ public class Main {
         }
     }
 
-    public static void task2() {
-        System.out.println("Задача 2");
-        byte clientOS = 1;
-        int clientDeviceYear = 2021;
-        checkOSAndYear(clientOS, clientDeviceYear);
-    }
-
     public static int checkDeliveryDays(int distance) {
         int deliveryDays = 1;
         if (distance > 20 && distance <= 60) {
@@ -52,12 +49,4 @@ public class Main {
         return deliveryDays;
     }
 
-    public static void task3() {
-        System.out.println("Задача 3");
-        int deliveryDistance = 21;
-        int deliveryDays = checkDeliveryDays(deliveryDistance);
-        if (deliveryDays > 0) {
-            System.out.println("На доставку потребуется " + deliveryDays + " дня");
-        }
-    }
 }
